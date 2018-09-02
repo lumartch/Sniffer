@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1535912161 source:c:\users\lumart\documents\sniffer\ethernet.cpp
+	"Ethernet.h"
+
+1535911957 c:\users\lumart\documents\sniffer\ethernet.h
+	<string>
+	<cstring>
+	<fstream>
+	<iomanip>
+
+1535912061 source:c:\users\lumart\documents\sniffer\main.cpp
+	<iostream>
+	"Ethernet.h"
+
