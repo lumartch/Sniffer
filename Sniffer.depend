@@ -1,14 +1,26 @@
 # depslib dependency file v1.0
-1535912161 source:c:\users\lumart\documents\sniffer\ethernet.cpp
+1535912228 source:c:\users\lumart\documents\sniffer\ethernet.cpp
 	"Ethernet.h"
 
-1535911957 c:\users\lumart\documents\sniffer\ethernet.h
+1535912228 c:\users\lumart\documents\sniffer\ethernet.h
 	<string>
 	<cstring>
 	<fstream>
 	<iomanip>
 
-1535912061 source:c:\users\lumart\documents\sniffer\main.cpp
+1535916221 source:c:\users\lumart\documents\sniffer\main.cpp
 	<iostream>
 	"Ethernet.h"
+	"ipv4.h"
+
+1535916132 source:c:\users\lumart\documents\sniffer\ipv4.cpp
+	"ipv4.h"
+
+1535916183 c:\users\lumart\documents\sniffer\ipv4.h
+	<string>
+	<cstring>
+	<fstream>
+	<iomanip>
+	<bitset>
+	<cmath>
 
