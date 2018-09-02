@@ -54,6 +54,9 @@ private:
     std::string separarBinario(const std::string&bin, const int &limInf, const int &limSup);
     std::string tipoServicio(const std::string&bin);
     std::string desglozandoBits(const std::string&bin);
+    std::string banderasActivadas(const std::string&bin);
+    std::string determinarProtocolo(const std::string&bin);
+    void formatoIp(std::string&ip, std::fstream& archivo);
 };
 
 #endif // IPV4_H

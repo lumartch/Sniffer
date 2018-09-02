@@ -38,7 +38,38 @@ void Ipv4::abrirArchivo(const std::string& archivo) {
         longitudTotal = std::to_string(binarioToDecimal(binario));
         // Identificador
         binario = hexadecimalToBinario(fin);
-
+        identificador = std::to_string(binarioToDecimal(binario));
+        binario = hexadecimalToBinario(fin);
+        identificador += std::to_string(binarioToDecimal(binario));
+        // Flags y posición de fragmento
+        binario = hexadecimalToBinario(fin);
+        flags = banderasActivadas(separarBinario(binario, BITS0, BITS3));
+        posicionFragmento = separarBinario(binario, BITS3, BITS8);
+        binario = hexadecimalToBinario(fin);
+        posicionFragmento += binario;
+        posicionFragmento = std::to_string(binarioToDecimal(posicionFragmento));
+        // Tiempo de vida
+        binario = hexadecimalToBinario(fin);
+        tiempoDeVida = std::to_string(binarioToDecimal(binario));
+        // Protocolo
+        binario = hexadecimalToBinario(fin);
+        tipoProtocolo = determinarProtocolo(binario);
+        // Suma de cabecera
+        for(int i = 0; i < 2; i++) {
+            int dato = 0;
+            std::stringstream stream;
+            fin.read((char*)&dato, 1);
+            if(dato < 10) {
+                stream << "0" << std::hex << dato;
+            } else {
+                stream << std::hex << dato;
+            }
+            sumaCabecera += stream.str();
+        }
+        // IP Origen y destino
+        formatoIp(ipOrigen, fin);
+        formatoIp(ipDestino, fin);
+        //Datos opcionales
     }
     fin.close();
 }
@@ -89,28 +120,73 @@ std::string Ipv4::tipoServicio(const std::string& bin) {
 
 std::string Ipv4::desglozandoBits(const std::string& bin) {
     std::string res = "Retraso: ";
-    if(bin[0] == '1'){
+    if(bin[0] == '1') {
         res += "Normal. | ";
-    }
-    else{
+    } else {
         res += "Bajo. | ";
     }
     res += "Rendimiento: ";
-    if(bin[1] == '1'){
+    if(bin[1] == '1') {
         res += "Normal. | ";
-    }
-    else{
+    } else {
         res += "Alto. | ";
     }
     res += "Fiabilidad: ";
-    if(bin[2] == '1'){
+    if(bin[2] == '1') {
         res += "Normal.";
-    }
-    else{
+    } else {
         res += "Alta.";
     }
     return res;
 }
+
+std::string Ipv4::banderasActivadas(const std::string& bin) {
+    std::string res = "Se activo la bandera: ";
+    if(bin[0] == '0') {
+        res += "Reservado. | ";
+    } else {
+        res += "No Reservado. | ";
+    }
+    if(bin[1] == '0') {
+        res += "Divisible. | ";
+    } else {
+        res += "No divisible. |";
+    }
+    if(bin[2] == '0') {
+        res += "Ultimo fragmento.";
+    } else {
+        res += "Fragmento intermedio.";
+    }
+    return res;
+}
+
+std::string Ipv4::determinarProtocolo(const std::string& bin) {
+    int protocol = binarioToDecimal(bin);
+    std::string res = "";
+    if(protocol == 1) {
+        res += "ICMP";
+    } else if(protocol == 4) {
+        res += "IP";
+    } else if(protocol == 6) {
+        res += "TCP";
+    } else if(protocol == 3) {
+        res += "GGP";
+    } else if(protocol == 17) {
+        res += "UDP";
+    }
+    return res;
+}
+
+void Ipv4::formatoIp(std::string& ip, std::fstream& archivo) {
+    for(int i = 0; i < 4; i++) {
+        std::string binario = hexadecimalToBinario(archivo);
+        ip += std::to_string(binarioToDecimal(binario));
+        if(i != 3) {
+            ip += ".";
+        }
+    }
+}
+
 
 std::string Ipv4::getVersion() {
     return this->version;
