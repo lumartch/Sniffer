@@ -17,6 +17,7 @@ Ipv4::Ipv4() {
 }
 
 Ipv4::Ipv4(const std::string& archivo) {
+    Ipv4();
     abrirArchivo(archivo);
 }
 

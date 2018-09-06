@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Ethernet.h"
 #include "ipv4.h"
+#include "ICMPv4.h"
 
 #if _WIN32
 #define CLEAR "cls"
@@ -43,6 +44,13 @@ int main() {
                 cout << "Suma de cabecera: " << ipv4.getSumaCabecera() << endl;
                 cout << "Ip Origen: " << ipv4.getIpOrigen() << endl;
                 cout << "Ip Destino: " << ipv4.getIpDestino() << endl;
+                if(ipv4.getTipoProtocolo() == "ICMP"){
+                    ICMPv4 icmp(archivo);
+                    cout << endl << endl << "-----ICMP-----" << endl;
+                    cout << "Mensaje informativo: " << icmp.getMensajeInformativo() << endl;
+                    cout << "Mensaje mensaje de error: " << icmp.getMensajeError() << endl;
+                    cout << "Checksum: " << icmp.getChecksum() << endl;
+                }
             }
             else if(eth.getTipoProtocolo() == "08:06"){
                 cout << " - ARP" << endl << endl;
