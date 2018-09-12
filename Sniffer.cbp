@@ -38,6 +38,8 @@
 		<Unit filename="Ethernet.h" />
 		<Unit filename="ICMPv4.cpp" />
 		<Unit filename="ICMPv4.h" />
+		<Unit filename="arpRarp.cpp" />
+		<Unit filename="arpRarp.h" />
 		<Unit filename="ipv4.cpp" />
 		<Unit filename="ipv4.h" />
 		<Unit filename="main.cpp" />
