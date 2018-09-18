@@ -3,6 +3,7 @@
 #include "ipv4.h"
 #include "ICMPv4.h"
 #include "arpRarp.h"
+#include "ipv6.h"
 
 #if _WIN32
 #define CLEAR "cls"
@@ -77,6 +78,16 @@ int main() {
 				cout << "Ip Receptor: "    << arpRarp.getIpReceptor()      << endl;
 			} else {
 				cout << " - Ipv6" << endl << endl;
+				IpV6 ipv6(archivo);
+				cout << "Versión: " << ipv6.getVersion() << endl;
+				cout << "Clase de tráfico: " << ipv6.getClase() << endl;
+				cout << "Tipo de flujo: " << ipv6.getTipoFlujo() << endl;
+				cout << "Tamaño de los datos: " << ipv6.getTamanioDatos() << endl;
+				cout << "Siguiente cabecera: " << ipv6.getSigCabecera() << endl;
+				cout << "Limite de salto: " << ipv6.getLimSalto() << endl;
+				cout << "Dirección origen: " << ipv6.getDirOrigen() << endl;
+				cout << "Dirección destino: " << ipv6.getDirDestino() << endl;
+				cout << "Datos: " << ipv6.getDatos() << endl;
 			}
 			cout << endl << endl << "¿Desea abrir un nuevo archivo?(S/N): ";
 		}

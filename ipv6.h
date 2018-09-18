@@ -11,9 +11,10 @@
 #define BITS12 12
 #define BITS16 16
 
-#include <cstring>
 #include <string>
+#include <cstring>
 #include <fstream>
+#include <iomanip>
 #include <bitset>
 #include <cmath>
 
@@ -45,6 +46,7 @@ private:
     int binarioToDecimal(const std::string&bin);
     std::string hexadecimalToBinario(std::fstream&archivo);
     std::string separarBinario(const std::string&bin, const int &limInf, const int &limSup);
+    void formatoOcteto(std::string&var, std::fstream& archivo);
 };
 
 #endif // IPV6_H

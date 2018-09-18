@@ -25,19 +25,80 @@ void IpV6::abrirArchivo(const std::string& archivo) {
         std::string binario = hexadecimalToBinario(fin);
         binario += hexadecimalToBinario(fin);
         this->version = std::to_string(binarioToDecimal(separarBinario(binario, BITS0, BITS4)));
+
+        // Clase incompleta
         this->clase = std::to_string(binarioToDecimal(separarBinario(binario, BITS4, BITS12)));
-        //Lee Tipo de flujo
+
+        //Lee Tipo de flujo - Incompleto
+        binario = separarBinario(binario, BITS12, BITS16);
         binario += hexadecimalToBinario(fin);
         binario += hexadecimalToBinario(fin);
-        //this->tipoFlujo = decimal
+        this->tipoFlujo = binario;
 
         // Lee el tamaño de datos
         binario = hexadecimalToBinario(fin);
         binario += hexadecimalToBinario(fin);
         this->tamanioDatos = std::to_string(binarioToDecimal(separarBinario(binario, BITS0, BITS16)));
+
         // Lee siguiente cabecera
         binario = hexadecimalToBinario(fin);
-        this->sigCabecera = std::to_string(binarioToDecimal(separarBinario(binario, BITS0, BITS8)))
+        this->sigCabecera = std::to_string(binarioToDecimal(separarBinario(binario, BITS0, BITS8)));
+
+        // Lee limite de salto - Incompleto
+        binario = hexadecimalToBinario(fin);
+        this->limSalto = binario;
+
+        // Lee Direccion de origen 128
+        for(int i = 1; i <= 16; i++){
+            int dato = 0;
+            std::stringstream stream;
+            fin.read((char*)&dato, 1);
+            if(dato < 10) {
+                stream << "0" << std::hex << dato;
+            } else {
+                stream << std::hex << dato;
+            }
+            if(i%2 == 0 and i != 16){
+                stream << ":";
+            }
+            this->dirOrigen += stream.str();
+        }
+
+        // Lee Direccion destino
+        for(int i = 1; i <= 16; i++){
+            int dato = 0;
+            std::stringstream stream;
+            fin.read((char*)&dato, 1);
+            if(dato < 10) {
+                stream << "0" << std::hex << dato;
+            } else {
+                stream << std::hex << dato;
+            }
+            if(i%2 == 0 and i != 16){
+                stream << ":";
+            }
+            this->dirDestino += stream.str();
+        }
+
+
+        //Lee datos
+        int cont = 1;
+        while(!fin.eof()){
+            if(fin.eof()){ break; }
+            int dato = 0;
+            std::stringstream stream;
+            fin.read((char*)&dato, 1);
+            if(dato < 10) {
+                stream << "0" << std::hex << dato;
+            } else {
+                stream << std::hex << dato;
+            }
+            if(cont%2 == 0){
+                stream << ":";
+            }
+            this->datos += stream.str();
+            cont++;
+        }
     }
     fin.close();
 }
