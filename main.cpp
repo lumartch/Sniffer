@@ -4,6 +4,7 @@
 #include "ICMPv4.h"
 #include "arpRarp.h"
 #include "ipv6.h"
+#include "icmpv6.h"
 
 #if _WIN32
 #define CLEAR "cls"
@@ -89,7 +90,11 @@ int main() {
 				cout << "Dirección destino: " << ipv6.getDirDestino() << endl;
 				cout << "Datos: " << ipv6.getDatos() << endl;
 				if(ipv6.getSigCabecera() == "ICMP"){
-
+					ICMPv6 icmp(archivo);
+					cout << endl << endl << "-----ICMPv6-----" << endl;
+					cout << "Tipo: " << icmp.getTipo() << endl;
+					cout << "Codigo: " << icmp.getCodigo() << endl;
+					cout << "Checksum: " << icmp.getChecksum() << endl;
 				}
 			}
 			cout << endl << endl << "¿Desea abrir un nuevo archivo?(S/N): ";

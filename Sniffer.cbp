@@ -40,6 +40,8 @@
 		<Unit filename="ICMPv4.h" />
 		<Unit filename="arpRarp.cpp" />
 		<Unit filename="arpRarp.h" />
+		<Unit filename="icmpv6.cpp" />
+		<Unit filename="icmpv6.h" />
 		<Unit filename="ipv4.cpp" />
 		<Unit filename="ipv4.h" />
 		<Unit filename="ipv6.cpp" />
