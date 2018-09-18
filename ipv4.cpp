@@ -230,7 +230,7 @@ std::string Ipv4::getTipoProtocolo() {
 }
 
 std::string Ipv4::getSumaCabecera() {
-    return this->sumaCabecera;
+    return this->sumaCabecera;std::string determinarProtocolo(const std::string&bin);
 }
 
 std::string Ipv4::getIpOrigen() {

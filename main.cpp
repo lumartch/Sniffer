@@ -80,14 +80,17 @@ int main() {
 				cout << " - Ipv6" << endl << endl;
 				IpV6 ipv6(archivo);
 				cout << "Versión: " << ipv6.getVersion() << endl;
-				cout << "Clase de tráfico: " << ipv6.getClase() << endl;
-				cout << "Tipo de flujo: " << ipv6.getTipoFlujo() << endl;
+				cout << "Tipo de tráfico: " << ipv6.getTrafico() << endl;
+				cout << "Etiqueta: " << ipv6.getEtiqueta() << endl;
 				cout << "Tamaño de los datos: " << ipv6.getTamanioDatos() << endl;
 				cout << "Siguiente cabecera: " << ipv6.getSigCabecera() << endl;
 				cout << "Limite de salto: " << ipv6.getLimSalto() << endl;
 				cout << "Dirección origen: " << ipv6.getDirOrigen() << endl;
 				cout << "Dirección destino: " << ipv6.getDirDestino() << endl;
 				cout << "Datos: " << ipv6.getDatos() << endl;
+				if(ipv6.getSigCabecera() == "ICMP"){
+
+				}
 			}
 			cout << endl << endl << "¿Desea abrir un nuevo archivo?(S/N): ";
 		}

@@ -17,6 +17,7 @@
 #include <iomanip>
 #include <bitset>
 #include <cmath>
+#include <iostream>
 
 class IpV6 {
 public:
@@ -24,8 +25,8 @@ public:
     IpV6(const std::string& archivo);
     void abrirArchivo(const std::string& archivo);
     std::string getVersion();
-    std::string getClase();
-    std::string getTipoFlujo();
+    std::string getTrafico();
+    std::string getEtiqueta();
     std::string getTamanioDatos();
     std::string getSigCabecera();
     std::string getLimSalto();
@@ -35,8 +36,8 @@ public:
 
 private:
     std::string version;
-    std::string clase;
-    std::string tipoFlujo;
+    std::string trafico;
+    std::string etiqueta;
     std::string tamanioDatos;
     std::string sigCabecera;
     std::string limSalto;
@@ -46,6 +47,8 @@ private:
     int binarioToDecimal(const std::string&bin);
     std::string hexadecimalToBinario(std::fstream&archivo);
     std::string separarBinario(const std::string&bin, const int &limInf, const int &limSup);
+    std::string tipoTrafico(const std::string&bin);
+    std::string determinarCabecera(const std::string&bin);
     void formatoOcteto(std::string&var, std::fstream& archivo);
 };
 
