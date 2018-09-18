@@ -42,6 +42,8 @@
 		<Unit filename="arpRarp.h" />
 		<Unit filename="ipv4.cpp" />
 		<Unit filename="ipv4.h" />
+		<Unit filename="ipv6.cpp" />
+		<Unit filename="ipv6.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<envvars />
