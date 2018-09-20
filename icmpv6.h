@@ -1,7 +1,7 @@
 #ifndef ICMPV6_H
 #define ICMPV6_H
 
-#define INICIOICMPV6 34
+#define INICIOICMPV6 54
 #define BITS1 1
 
 #include <cstring>

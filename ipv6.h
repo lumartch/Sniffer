@@ -17,7 +17,6 @@
 #include <iomanip>
 #include <bitset>
 #include <cmath>
-#include <iostream>
 
 class IpV6 {
 public:

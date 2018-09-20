@@ -17,6 +17,7 @@ void ICMPv6::abrirArchivo(const std::string& archivo) {
     if(fin.good()) {
         fin.seekg(INICIOICMPV6, std::ios::beg);
         setTipoCodigo(fin);
+        setChecksum(fin);
     }
     fin.close();
 }
@@ -25,57 +26,45 @@ void ICMPv6::setTipoCodigo(std::fstream& archivo) {
     int type = 0, code = 0;
     archivo.read((char*)&type, BITS1);
     archivo.read((char*)&code, BITS1);
-    if(type == 1){
+    if(type == 1) {
         this->tipo = "Destino inaccesible";
-        if(code == 0){
+        if(code == 0) {
             this->codigo = "No existe ruta destino";
-        }
-        else if(code == 1){
+        } else if(code == 1) {
             this->codigo = "Comunicación con el destino administrativamente prohibida";
-        }
-        else if(code == 2){
+        } else if(code == 2) {
 
             this->codigo = "No asignado";
-        }
-        else if(code == 3){
+        } else if(code == 3) {
             this->codigo = "Dirección inalcanzable";
 
-        }
-        else if(code == 4){
+        } else if(code == 4) {
             this->codigo = "Puerto inalcanzable";
 
         }
-    }
-    else if(type == 2){
+    } else if(type == 2) {
         this->tipo = "Paquete demasiado grande";
-    }
-    else if(type == 3){
+    } else if(type == 3) {
         this->tipo = "Tiempo excedido";
-        if(code == 0){
+        if(code == 0) {
             this->codigo = "Limite de saltos excedido";
-        }
-        else {
+        } else {
             this->codigo = "Tiempo excedido en el reensable del paquete";
         }
-    }
-    else if(type == 4){
+    } else if(type == 4) {
         this->tipo = "Problema de parametros";
 
-    }
-    else if(type == 128){
+    } else if(type == 128) {
         this->tipo = "Solicitud eco";
-        if(code == 0){
+        if(code == 0) {
             this->codigo = "Error en el campo de encabezado";
-        }
-        else if(code == 1){
+        } else if(code == 1) {
             this->codigo = "Tipo de siguiente encabezado desconocido";
-        }
-        else if(code == 2){
+        } else if(code == 2) {
 
             this->codigo = "Opción IPv6 desconocida";
         }
-    }
-    else if(type == 129){
+    } else if(type == 129) {
         this->tipo = "Respuesta eco";
 
     }
@@ -91,7 +80,7 @@ void ICMPv6::setChecksum(std::fstream& archivo) {
         } else {
             stream << std::hex << dato;
         }
-        checksum += stream.str();
+        this->checksum += stream.str();
     }
 }
 
@@ -104,7 +93,7 @@ std::string ICMPv6::getCodigo() {
 }
 
 std::string ICMPv6::getChecksum() {
-    return checksum;
+    return this->checksum;
 }
 
 

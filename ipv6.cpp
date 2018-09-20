@@ -50,7 +50,6 @@ void IpV6::abrirArchivo(const std::string& archivo) {
         // Lee siguiente cabecera -
         binario = hexadecimalToBinario(fin);
         this->sigCabecera = determinarCabecera(binario);
-        std::cout  << std::endl << binario;
 
         // Lee limite de salto
         binario = hexadecimalToBinario(fin);
