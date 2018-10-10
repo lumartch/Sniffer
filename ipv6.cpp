@@ -33,7 +33,7 @@ void IpV6::abrirArchivo(const std::string& archivo) {
         std::stringstream stream;
         stream << std::hex << num;
         for(int i = 0; i < 2; i++) {
-            fin.read((char*)&num, BYTE);
+            fin.read((char*)&num, BYTE1);
             if(num < 10) {
                 stream << "0" << std::hex << num;
             } else {
@@ -160,7 +160,7 @@ int IpV6::binarioToDecimal(const std::string& bin) {
 
 std::string IpV6::hexadecimalToBinario(std::fstream& archivo) {
     int res = 0;
-    archivo.read((char*)&res, BYTE);
+    archivo.read((char*)&res, BYTE1);
     std::string bin = std::bitset<8>(res).to_string(), myRes;
     return bin;
 }

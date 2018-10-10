@@ -2,7 +2,7 @@
 #define ARPRARP_H_INCLUDED
 
 #define INICIOARPRARP 14
-#define BYTE   1
+#define BYTE1   1
 #define BITS0  0
 #define BITS4  4
 #define BITS3  3
@@ -31,6 +31,7 @@ public:
 	std::string getIpEmisor();
 	std::string getMacReceptor();
 	std::string getIpReceptor();
+	std::string getDatos();
 
 private:
 	std::string tipoHardware;
@@ -42,6 +43,7 @@ private:
 	std::string ipEmisor;
 	std::string macReceptor;
 	std::string ipReceptor;
+	std::string datos;
 	int binarioToDecimal(const std::string&bin);
 	std::string hexadecimalToBinario(std::fstream&archivo);
 	std::string separarBinario(const std::string&bin, const int &limInf, const int &limSup);

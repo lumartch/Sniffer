@@ -12,6 +12,7 @@ ArpRarp::ArpRarp() {
 	this->ipEmisor = "";
 	this->macReceptor = "";
 	this->ipReceptor = "";
+	this->datos = "";
 }
 
 ArpRarp::ArpRarp(const std::string& archivo) {
@@ -29,11 +30,11 @@ void ArpRarp::abrirArchivo(const std::string& archivo) {
         setProtocolo(fin);
         tipoProtocolo = getProtocoloCadena();
         int longitud(0);
-        fin.read((char*)&longitud, BYTE);
+        fin.read((char*)&longitud, BYTE1);
         std::stringstream ss;
         ss << std::hex << longitud;
         longitudMac = ss.str();
-        fin.read((char*)&longitud, BYTE);
+        fin.read((char*)&longitud, BYTE1);
         ss.str(""); /// Para limpiar ss
         ss << std::hex << longitud;
         longitudIp = ss.str();
@@ -45,6 +46,26 @@ void ArpRarp::abrirArchivo(const std::string& archivo) {
         formatoIp(ipEmisor, fin);
         setDireccion(fin, macReceptor);
         formatoIp(ipReceptor,fin);
+
+        int cont = 1;
+        while(!fin.eof()) {
+            if(fin.eof()) {
+                break;
+            }
+            int dato = 0;
+            std::stringstream stream;
+            fin.read((char*)&dato, 1);
+            if(dato < 10) {
+                stream << "0" << std::hex << dato;
+            } else {
+                stream << std::hex << dato;
+            }
+            if(cont%2 == 0) {
+                stream << ":";
+            }
+            this->datos += stream.str();
+            cont++;
+        }
 	}
 	fin.close();
 }
@@ -97,7 +118,7 @@ int ArpRarp::binarioToDecimal(const std::string& bin) {
 
 std::string ArpRarp::hexadecimalToBinario(std::fstream& archivo) {
     int res = 0;
-    archivo.read((char*)&res, BYTE);
+    archivo.read((char*)&res, BYTE1);
     std::string bin = std::bitset<8>(res).to_string(), myRes;
     return bin;
 }
@@ -319,3 +340,9 @@ void ArpRarp::formatoIp(std::string& ip, std::fstream& archivo) {
 		}
 	}
 }
+
+std::string ArpRarp::getDatos()
+{
+	return this->datos;
+}
+

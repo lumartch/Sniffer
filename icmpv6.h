@@ -25,7 +25,7 @@ private:
     std::string tipo;
     std::string codigo;
     std::string checksum;
-private:
+    std::string datos;
 };
 
 #endif // ICMPV6_H

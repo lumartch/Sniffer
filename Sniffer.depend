@@ -124,11 +124,11 @@
 	<bitset>
 	<cmath>
 
-1537220934 source:c:\users\lumart\desktop\sniffer\arprarp.cpp
+1539100095 source:c:\users\lumart\desktop\sniffer\arprarp.cpp
 	"arpRarp.h"
 	<iostream>
 
-1537220934 c:\users\lumart\desktop\sniffer\arprarp.h
+1539100087 c:\users\lumart\desktop\sniffer\arprarp.h
 	<string>
 	<cstring>
 	<fstream>
@@ -136,29 +136,29 @@
 	<bitset>
 	<cmath>
 
-1537220934 source:c:\users\lumart\desktop\sniffer\ethernet.cpp
+1539100067 source:c:\users\lumart\desktop\sniffer\ethernet.cpp
 	"Ethernet.h"
 
-1537220934 c:\users\lumart\desktop\sniffer\ethernet.h
+1536710622 c:\users\lumart\desktop\sniffer\ethernet.h
 	<string>
 	<cstring>
 	<fstream>
 	<iomanip>
 
-1537220934 source:c:\users\lumart\desktop\sniffer\icmpv4.cpp
+1536710622 source:c:\users\lumart\desktop\sniffer\icmpv4.cpp
 	"ICMPv4.h"
 
-1537220934 c:\users\lumart\desktop\sniffer\icmpv4.h
+1536710622 c:\users\lumart\desktop\sniffer\icmpv4.h
 	<cstring>
 	<string>
 	<fstream>
 	<sstream>
 	<iostream>
 
-1537220934 source:c:\users\lumart\desktop\sniffer\ipv4.cpp
+1539099923 source:c:\users\lumart\desktop\sniffer\ipv4.cpp
 	"ipv4.h"
 
-1537226596 c:\users\lumart\desktop\sniffer\ipv4.h
+1539099766 c:\users\lumart\desktop\sniffer\ipv4.h
 	<string>
 	<cstring>
 	<fstream>
@@ -166,18 +166,18 @@
 	<bitset>
 	<cmath>
 
-1537230524 source:c:\users\lumart\desktop\sniffer\main.cpp
+1539136718 source:c:\users\lumart\desktop\sniffer\main.cpp
 	<iostream>
-	"Ethernet.h"
-	"ipv4.h"
-	"ICMPv4.h"
-	"arpRarp.h"
+	<winsock2.h>
+	"pcap.h"
+	<stdlib.h>
+	<stdio.h>
+	<pcap.h>
+
+1539099295 source:c:\users\lumart\desktop\sniffer\ipv6.cpp
 	"ipv6.h"
 
-1537230670 source:c:\users\lumart\desktop\sniffer\ipv6.cpp
-	"ipv6.h"
-
-1537229650 c:\users\lumart\desktop\sniffer\ipv6.h
+1539099287 c:\users\lumart\desktop\sniffer\ipv6.h
 	<string>
 	<cstring>
 	<fstream>
@@ -200,6 +200,16 @@
 	"icmpv6.h"
 
 1537454517 /home/lumartch/Sniffer/icmpv6.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+
+1538570441 source:c:\users\lumart\desktop\sniffer\icmpv6.cpp
+	"icmpv6.h"
+
+1539099706 c:\users\lumart\desktop\sniffer\icmpv6.h
 	<cstring>
 	<string>
 	<fstream>

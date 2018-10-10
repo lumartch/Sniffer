@@ -14,6 +14,7 @@ Ipv4::Ipv4() {
     this->sumaCabecera = "";
     this->ipOrigen = "";
     this->ipDestino = "";
+    this->datos = "";
 }
 
 Ipv4::Ipv4(const std::string& archivo) {
@@ -71,6 +72,25 @@ void Ipv4::abrirArchivo(const std::string& archivo) {
         formatoIp(ipOrigen, fin);
         formatoIp(ipDestino, fin);
         //Datos opcionales
+        int cont = 1;
+        while(!fin.eof()) {
+            if(fin.eof()) {
+                break;
+            }
+            int dato = 0;
+            std::stringstream stream;
+            fin.read((char*)&dato, 1);
+            if(dato < 10) {
+                stream << "0" << std::hex << dato;
+            } else {
+                stream << std::hex << dato;
+            }
+            if(cont%2 == 0) {
+                stream << ":";
+            }
+            this->datos += stream.str();
+            cont++;
+        }
     }
     fin.close();
 }
@@ -86,7 +106,7 @@ int Ipv4::binarioToDecimal(const std::string& bin) {
 }
 std::string Ipv4::hexadecimalToBinario(std::fstream&archivo) {
     int res = 0;
-    archivo.read((char*)&res, BYTE);
+    archivo.read((char*)&res, BYTE1);
     std::string bin = std::bitset<8>(res).to_string(), myRes;
     return bin;
 }
@@ -230,7 +250,7 @@ std::string Ipv4::getTipoProtocolo() {
 }
 
 std::string Ipv4::getSumaCabecera() {
-    return this->sumaCabecera;std::string determinarProtocolo(const std::string&bin);
+    return this->sumaCabecera;
 }
 
 std::string Ipv4::getIpOrigen() {
@@ -240,3 +260,9 @@ std::string Ipv4::getIpOrigen() {
 std::string Ipv4::getIpDestino() {
     return this->ipDestino;
 }
+
+std::string Ipv4::getDatos()
+{
+	return this->datos;
+}
+

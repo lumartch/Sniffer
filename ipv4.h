@@ -2,7 +2,7 @@
 #define IPV4_H
 
 #define INICIOIPV4 14
-#define BYTE 1
+#define BYTE1 1
 #define BITS0 0
 #define BITS4 4
 #define BITS3 3
@@ -34,6 +34,7 @@ public:
     std::string getSumaCabecera();
     std::string getIpOrigen();
     std::string getIpDestino();
+    std::string getDatos();
 
 private:
     std::string version;
@@ -49,6 +50,7 @@ private:
     std::string sumaCabecera;
     std::string ipOrigen;
     std::string ipDestino;
+    std::string datos;
     int binarioToDecimal(const std::string&bin);
     std::string hexadecimalToBinario(std::fstream&archivo);
     std::string separarBinario(const std::string&bin, const int &limInf, const int &limSup);

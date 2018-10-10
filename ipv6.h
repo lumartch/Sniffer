@@ -2,7 +2,7 @@
 #define IPV6_H
 
 #define INICIOIPV6 14
-#define BYTE 1
+#define BYTE1 1
 #define BITS0 0
 #define BITS4 4
 #define BITS3 3
