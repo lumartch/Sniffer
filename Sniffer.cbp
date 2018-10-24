@@ -57,6 +57,15 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="sniffer.cpp" />
 		<Unit filename="sniffer.h" />
+		<Unit filename="tcp.cpp" />
+		<Unit filename="tcp.h" />
+		<Unit filename="tcpv6.cpp" />
+		<Unit filename="tcpv6.h" />
+		<Unit filename="udp.cpp" />
+		<Unit filename="udp.h" />
+		<Unit filename="udpv6.cpp" />
+		<Unit filename="udpv6.h" />
+		<Unit filename="updv6.cpp" />
 		<Extensions>
 			<envvars />
 			<code_completion />

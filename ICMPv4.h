@@ -12,20 +12,20 @@
 
 class ICMPv4 {
 public:
-    ICMPv4();
-    ICMPv4(const std::string& archivo);
-    void abrirArchivo(const std::string&archivo);
-    void setMensajeInformativo(std::fstream& archivo);
-    void setMensajeError(std::fstream& archivo);
-    void setChecksum(std::fstream& archivo);
-    std::string getMensajeInformativo();
-    std::string getMensajeError();
-    std::string getChecksum();
+	ICMPv4();
+	ICMPv4(const std::string& archivo);
+	void abrirArchivo(const std::string&archivo);
+	void setMensajeInformativo(std::fstream& archivo);
+	void setMensajeError(std::fstream& archivo);
+	void setChecksum(std::fstream& archivo);
+	std::string getMensajeInformativo();
+	std::string getMensajeError();
+	std::string getChecksum();
 
 private:
-    std::string mensajeInformativo;
-    std::string mensajeError;
-    std::string checksum;
+	std::string mensajeInformativo;
+	std::string mensajeError;
+	std::string checksum;
 };
 
 #endif // ICMPV4_H
