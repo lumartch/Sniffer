@@ -134,7 +134,7 @@ int main(int argc, char **argv) {
 		Sniffer mySniffer;
 		mySniffer.showData();
 
-		cout << endl << endl << "¿Desea abrir un nuevo archivo?(S/N): ";
+		cout << endl << endl << "Â¿Desea abrir un nuevo archivo?(S/N): ";
 		do {
 			getline(cin, opc);
 		} while(opc != "N" and opc != "n" and

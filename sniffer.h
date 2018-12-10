@@ -18,6 +18,7 @@
 #include "tcpv6.h"
 #include "udp.h"
 #include "udpv6.h"
+#include "dns.h"
 #include <winsock2.h>
 
 using namespace std;

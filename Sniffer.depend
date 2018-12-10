@@ -1,22 +1,9 @@
 # depslib dependency file v1.0
-1535912228 source:c:\users\lumart\documents\sniffer\ethernet.cpp
-	"Ethernet.h"
-
-1535912228 c:\users\lumart\documents\sniffer\ethernet.h
-	<string>
-	<cstring>
-	<fstream>
-	<iomanip>
-
-1535919256 source:c:\users\lumart\documents\sniffer\main.cpp
+1539730203 source:c:\users\guillermo_laptop\desktop\sniffer\arprarp.cpp
+	"arpRarp.h"
 	<iostream>
-	"Ethernet.h"
-	"ipv4.h"
 
-1535919342 source:c:\users\lumart\documents\sniffer\ipv4.cpp
-	"ipv4.h"
-
-1535918549 c:\users\lumart\documents\sniffer\ipv4.h
+1539730199 c:\users\guillermo_laptop\desktop\sniffer\arprarp.h
 	<string>
 	<cstring>
 	<fstream>
@@ -24,77 +11,52 @@
 	<bitset>
 	<cmath>
 
-1536244016 source:/home/lumartch/Sniffer/Ethernet.cpp
-	"Ethernet.h"
+1541521467 source:c:\users\guillermo_laptop\desktop\sniffer\dns.cpp
+	"dns.h"
 
-1536244016 /home/lumartch/Sniffer/Ethernet.h
-	<string>
+1541087418 c:\users\guillermo_laptop\desktop\sniffer\dns.h
 	<cstring>
-	<fstream>
-	<iomanip>
-
-1536246478 source:/home/lumartch/Sniffer/ipv4.cpp
-	"ipv4.h"
-
-1536244016 /home/lumartch/Sniffer/ipv4.h
 	<string>
-	<cstring>
 	<fstream>
+	<sstream>
+	<iostream>
 	<iomanip>
 	<bitset>
 	<cmath>
 
-1536247551 source:/home/lumartch/Sniffer/main.cpp
-	<iostream>
+1539730197 source:c:\users\guillermo_laptop\desktop\sniffer\ethernet.cpp
 	"Ethernet.h"
-	"ipv4.h"
+
+1539730195 c:\users\guillermo_laptop\desktop\sniffer\ethernet.h
+	<string>
+	<cstring>
+	<fstream>
+	<iomanip>
+
+1539730200 source:c:\users\guillermo_laptop\desktop\sniffer\icmpv4.cpp
 	"ICMPv4.h"
 
-1536248258 source:/home/lumartch/Sniffer/ICMPv4.cpp
-	"ICMPv4.h"
-
-1536248811 /home/lumartch/Sniffer/ICMPv4.h
+1539730202 c:\users\guillermo_laptop\desktop\sniffer\icmpv4.h
 	<cstring>
 	<string>
 	<fstream>
 	<sstream>
 	<iostream>
 
-1536716781 source:c:\users\lumart\desktop\sniffer-master\sniffer\arprarp.cpp
-	"arpRarp.h"
-	<iostream>
+1539730207 source:c:\users\guillermo_laptop\desktop\sniffer\icmpv6.cpp
+	"icmpv6.h"
 
-1536716490 c:\users\lumart\desktop\sniffer-master\sniffer\arprarp.h
-	<string>
-	<cstring>
-	<fstream>
-	<iomanip>
-	<bitset>
-	<cmath>
-
-1536717644 source:c:\users\lumart\desktop\sniffer-master\sniffer\ethernet.cpp
-	"Ethernet.h"
-
-1536717644 c:\users\lumart\desktop\sniffer-master\sniffer\ethernet.h
-	<string>
-	<cstring>
-	<fstream>
-	<iomanip>
-
-1536717644 source:c:\users\lumart\desktop\sniffer-master\sniffer\icmpv4.cpp
-	"ICMPv4.h"
-
-1536717644 c:\users\lumart\desktop\sniffer-master\sniffer\icmpv4.h
+1539730205 c:\users\guillermo_laptop\desktop\sniffer\icmpv6.h
 	<cstring>
 	<string>
 	<fstream>
 	<sstream>
 	<iostream>
 
-1536717644 source:c:\users\lumart\desktop\sniffer-master\sniffer\ipv4.cpp
+1539735110 source:c:\users\guillermo_laptop\desktop\sniffer\ipv4.cpp
 	"ipv4.h"
 
-1536717644 c:\users\lumart\desktop\sniffer-master\sniffer\ipv4.h
+1539730208 c:\users\guillermo_laptop\desktop\sniffer\ipv4.h
 	<string>
 	<cstring>
 	<fstream>
@@ -102,18 +64,10 @@
 	<bitset>
 	<cmath>
 
-1536717212 source:c:\users\lumart\desktop\sniffer-master\sniffer\main.cpp
-	<iostream>
-	"Ethernet.h"
-	"ipv4.h"
-	"ICMPv4.h"
-	"arpRarp.h"
+1539730199 source:c:\users\guillermo_laptop\desktop\sniffer\ipv6.cpp
+	"ipv6.h"
 
-1539733803 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\arprarp.cpp
-	"arpRarp.h"
-	<iostream>
-
-1539733799 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\arprarp.h
+1539730201 c:\users\guillermo_laptop\desktop\sniffer\ipv6.h
 	<string>
 	<cstring>
 	<fstream>
@@ -121,37 +75,7 @@
 	<bitset>
 	<cmath>
 
-1539733797 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\ethernet.cpp
-	"Ethernet.h"
-
-1539733795 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\ethernet.h
-	<string>
-	<cstring>
-	<fstream>
-	<iomanip>
-
-1539733800 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\icmpv4.cpp
-	"ICMPv4.h"
-
-1539733802 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\icmpv4.h
-	<cstring>
-	<string>
-	<fstream>
-	<sstream>
-	<iostream>
-
-1539738710 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\ipv4.cpp
-	"ipv4.h"
-
-1539733808 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\ipv4.h
-	<string>
-	<cstring>
-	<fstream>
-	<iomanip>
-	<bitset>
-	<cmath>
-
-1539733810 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\main.cpp
+1539730210 source:c:\users\guillermo_laptop\desktop\sniffer\main.cpp
 	<iostream>
 	"Ethernet.h"
 	"ipv4.h"
@@ -164,7 +88,7 @@
 	<stdio.h>
 	<pcap.h>
 
-1540309292 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\sniffer.h
+1541088572 c:\users\guillermo_laptop\desktop\sniffer\sniffer.h
 	<iostream>
 	"Ethernet.h"
 	"ipv4.h"
@@ -176,74 +100,80 @@
 	"tcpv6.h"
 	"udp.h"
 	"udpv6.h"
+	"dns.h"
 	<winsock2.h>
 
-1540309298 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\sniffer.cpp
+1539745184 c:\users\guillermo_laptop\desktop\sniffer\tcp.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1539745340 c:\users\guillermo_laptop\desktop\sniffer\tcpv6.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1540303617 c:\users\guillermo_laptop\desktop\sniffer\udp.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1540305428 c:\users\guillermo_laptop\desktop\sniffer\udpv6.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1541521211 source:c:\users\guillermo_laptop\desktop\sniffer\sniffer.cpp
 	"sniffer.h"
 
-1539733801 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\ipv6.h
-	<string>
-	<cstring>
-	<fstream>
-	<iomanip>
-	<bitset>
-	<cmath>
-
-1539733805 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\icmpv6.h
-	<cstring>
-	<string>
-	<fstream>
-	<sstream>
-	<iostream>
-
-1539733807 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\icmpv6.cpp
-	"icmpv6.h"
-
-1539733799 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\ipv6.cpp
-	"ipv6.h"
-
-1539748784 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\tcp.h
-	<cstring>
-	<string>
-	<fstream>
-	<sstream>
-	<iostream>
-	<iomanip>
-	<bitset>
-	<cmath>
-
-1540306992 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\tcp.cpp
+1540303392 source:c:\users\guillermo_laptop\desktop\sniffer\tcp.cpp
 	"tcp.h"
 
-1539748940 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\tcpv6.h
-	<cstring>
-	<string>
-	<fstream>
-	<sstream>
-	<iostream>
-	<iomanip>
-	<bitset>
-	<cmath>
-
-1540306990 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\tcpv6.cpp
+1540303390 source:c:\users\guillermo_laptop\desktop\sniffer\tcpv6.cpp
 	"tcpv6.h"
 
-1540307217 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\udp.h
-	<cstring>
-	<string>
-	<fstream>
-	<sstream>
-	<iostream>
-	<iomanip>
-	<bitset>
-	<cmath>
-
-1540306362 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\updv6.cpp
-
-1540309013 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\udp.cpp
+1540305413 source:c:\users\guillermo_laptop\desktop\sniffer\udp.cpp
 	"udp.h"
 
-1540309028 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer-master\udpv6.h
+1540305717 source:c:\users\guillermo_laptop\desktop\sniffer\udpv6.cpp
+	"udpv6.h"
+
+1539730203 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\arprarp.cpp
+	"arpRarp.h"
+	<iostream>
+
+1539730199 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\arprarp.h
+	<string>
+	<cstring>
+	<fstream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1541717503 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\dns.cpp
+	"dns.h"
+
+1541692123 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\dns.h
 	<cstring>
 	<string>
 	<fstream>
@@ -252,4 +182,139 @@
 	<iomanip>
 	<bitset>
 	<cmath>
+	<stdlib.h>
+
+1539730197 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\ethernet.cpp
+	"Ethernet.h"
+
+1539730195 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\ethernet.h
+	<string>
+	<cstring>
+	<fstream>
+	<iomanip>
+
+1539730200 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\icmpv4.cpp
+	"ICMPv4.h"
+
+1539730202 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\icmpv4.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+
+1539730207 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\icmpv6.cpp
+	"icmpv6.h"
+
+1539730205 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\icmpv6.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+
+1539735110 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\ipv4.cpp
+	"ipv4.h"
+
+1539730208 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\ipv4.h
+	<string>
+	<cstring>
+	<fstream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1539730199 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\ipv6.cpp
+	"ipv6.h"
+
+1539730201 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\ipv6.h
+	<string>
+	<cstring>
+	<fstream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1541716613 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\main.cpp
+	<iostream>
+	"Ethernet.h"
+	"ipv4.h"
+	"ICMPv4.h"
+	"arpRarp.h"
+	"sniffer.h"
+	<winsock2.h>
+	"pcap.h"
+	<stdlib.h>
+	<stdio.h>
+	<pcap.h>
+
+1541088572 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\sniffer.h
+	<iostream>
+	"Ethernet.h"
+	"ipv4.h"
+	"ICMPv4.h"
+	"arpRarp.h"
+	"ipv6.h"
+	"icmpv6.h"
+	"tcp.h"
+	"tcpv6.h"
+	"udp.h"
+	"udpv6.h"
+	"dns.h"
+	<winsock2.h>
+
+1539745184 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\tcp.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1539745340 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\tcpv6.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1541717497 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\udp.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1540305428 c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\udpv6.h
+	<cstring>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<bitset>
+	<cmath>
+
+1541718748 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\sniffer.cpp
+	"sniffer.h"
+
+1540303392 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\tcp.cpp
+	"tcp.h"
+
+1540303390 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\tcpv6.cpp
+	"tcpv6.h"
+
+1540305413 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\udp.cpp
+	"udp.h"
+
+1540305717 source:c:\users\guillermo_laptop\documents\cucei\quinto semestre\seminario de redes\sniffer\udpv6.cpp
+	"udpv6.h"
 

@@ -13,16 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include" />
 				</Compiler>
-				<Linker>
-					<Add library="C:/WpdPack/Lib/libwpcap.a" />
-					<Add library="C:/WpdPack/Lib/libpacket.a" />
-					<Add library="C:/WpdPack/Lib/Packet.lib" />
-					<Add library="C:/WpdPack/Lib/wpcap.lib" />
-					<Add library="C:/WpdPack/Lib/x64/Packet.lib" />
-					<Add library="C:/WpdPack/Lib/x64/wpcap.lib" />
-				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Sniffer" prefix_auto="1" extension_auto="1" />
@@ -31,7 +22,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -48,6 +38,8 @@
 		<Unit filename="ICMPv4.h" />
 		<Unit filename="arpRarp.cpp" />
 		<Unit filename="arpRarp.h" />
+		<Unit filename="dns.cpp" />
+		<Unit filename="dns.h" />
 		<Unit filename="icmpv6.cpp" />
 		<Unit filename="icmpv6.h" />
 		<Unit filename="ipv4.cpp" />
@@ -65,11 +57,11 @@
 		<Unit filename="udp.h" />
 		<Unit filename="udpv6.cpp" />
 		<Unit filename="udpv6.h" />
-		<Unit filename="updv6.cpp" />
 		<Extensions>
-			<envvars />
 			<code_completion />
+			<envvars />
 			<debugger />
+			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

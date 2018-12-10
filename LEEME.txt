@@ -1,0 +1,4 @@
+-Para el correcto uso de este Sniffer, se usara LibCap (Linux), winCap (Windows) o nPcap (Windows 8.1 y 10).
+-Luego se configuraran los archivos de la carpeta "WpdPack" dentro del IDE CodeBlocks como se ve en este enlace de StackOverflow https://stackoverflow.com/questions/36673390/how-can-i-link-winpcap-in-code-blocks
+Finalmente se procedera a ejecutar el programa.
+
